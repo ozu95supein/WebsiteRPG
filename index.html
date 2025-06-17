@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>WELCOME</h1>
+    <h2>Please Create your Character</h2>
+    <h3>Enter your Player Name</h3>
+        <label>Player Name: </label>
+        <input id="playerText"><br>
+        <button id="playerTextSubmit">Submit</button>
+    <br>
+    <h3>Enter your Character Name</h3>
+        <label>Character Name: </label>
+        <input id="characterText"><br>
+        <button id="characterTextSubmit">Submit</button>
+    <br>
+    <!--This is the interactive portion of the website-->
+    <div class="StatPointPoolBar">
+        <p> Total Stat Points Remaining: <span id="statPointPoolNumber"></span></p>
+    </div>
+
+    <div class="StatNumber">
+        <p> <button onclick=updateBody(-1)>-</button> Body <button onclick=updateBody(+1)>+</button> <p id="bodyNumber"></p></p>
+    </div>
+    <div class="StatNumber">
+        <p> <button onclick=updateAgility(-1)>-</button> Agility <button onclick=updateAgility(+1)>+</button> <p id="agilityNumber"></p></p>
+    </div>
+    <div class="StatNumber">
+        <p> <button onclick=updateMind(-1)>-</button> Mind <button onclick=updateMind(+1)>+</button> <p id="mindNumber"></p></p>
+    </div>
+    <div class="StatNumber">
+        <p> <button onclick=updateInstinct(-1)>-</button> Instinct <button onclick=updateInstinct(+1)>+</button> <p id="instinctNumber"></p></p>
+    </div>
+    <!--The button that submits all to local storage-->
+    <button onclick=finishAndStore()>FINISH</button>
+    <!--Place js linking scripts at the bottom in case of error with .js file-->
+    <script src="index.js"></script>
+</body>
+</html>
