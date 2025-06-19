@@ -118,6 +118,7 @@ function finishAndStore()
     }
     if (confirm("Are you sure you want to Finish Creating your Character?")) {
         saveToLocal();
+        ProceedToCharacterDisplay();
     } else {
         //cancel and return
     } 
@@ -130,4 +131,18 @@ function saveToLocal()
     localStorage.setItem('LS_agility', AGILITY);
     localStorage.setItem('LS_mind', MIND);
     localStorage.setItem('LS_instinct', INSTINCT);
+}
+function ProceedToCharacterDisplay()
+{
+    window.location.href = 'CharacterDisplay.html';
+    return false;
+}
+function UpdateCharacterDisplay()
+{
+    document.getElementById("playerText").innerHTML = LS_playerName;
+    document.getElementById("characterText").innerHTML = LS_characterName;
+    document.getElementById("bodyNumber").innerHTML = LS_body;
+    document.getElementById("agilityNumber").innerHTML = LS_agility;
+    document.getElementById("mindNumber").innerHTML = LS_mind;
+    document.getElementById("instinctNumber").innerHTML = LS_instinct;
 }
